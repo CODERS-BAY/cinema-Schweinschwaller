@@ -1,0 +1,70 @@
+Seat:
+key:	Row_Nr
+key:	Seat_Nr
+Fkey:	Box_Nr
+
+Box:
+Key:	Box_Nr
+	Box_Price
+Fkey:	Hall_NR	
+
+
+Hall:
+key:	Hall_NR	
+Fkey:	Cinema_ID	
+
+Cinema:
+key:	Cinema_ID
+	Name
+	Adresse
+
+H_M:
+Fkey: 	Hall_NR
+Fkey: 	Movie_ID
+Key:	Hall_Movie_ID
+	
+
+Movie:
+Key:	Movie_ID
+	titel
+	relase
+	
+Movie_Actor:
+Fkey:	Movie_ID
+Fkey:	Actor_ID
+key:	Movie_Actor_ID
+
+
+Actor:
+key:	Actor_ID
+	urname
+	first name
+	nationality
+	date of birth
+	date of death
+	comments
+
+Director:
+key:	Director_ID
+	urname
+	first name
+	nationality
+	date of birth
+	date of death
+	comments
+
+Movie_Director:
+Fkey:	Movie_ID
+Fkey:	Director_ID
+key:	Movie_Director_ID
+
+Ticket
+Fkey:	Cinema_ID
+Fkey:	Hall_NR	
+Fkey:	Movie_ID
+Fkey:	Box_Nr
+Fkey:	Row_Nr
+Fkey:	Seat_Nr
+key:	SNr
+	date
+	starting time
